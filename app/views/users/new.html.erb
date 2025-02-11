@@ -1,0 +1,15 @@
+<h1 class="display-2">Create New User</h1><br>
+
+<%= form_for @user, class: 'container' do |f| %>
+  <div class="mb-3">
+    <%= f.label :username, class: "form-label" %>
+    <%= f.text_field :username, class: "form-control", placeholder: "Enter your username" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :password, class: "form-label" %>
+    <%= f.password_field :password, class: "form-control", placeholder: "Enter your password" %>
+  </div>
+
+  <%= f.submit "Create Account", class: "btn btn-primary" %>
+<% end %>

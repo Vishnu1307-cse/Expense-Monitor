@@ -1,0 +1,35 @@
+<% content_for :title, "New expense" %>
+
+<div class="md:w-2/3 w-full">
+  <h1 class="display-3">New Expense</h1>
+
+  <%= form_with(model: @expense, local: true, html: { class: "container mt-4" }) do |f| %>
+    <div class="mb-3">
+      <%= f.label :name, class: "form-label" %>
+      <%= f.text_field :name, class: "form-control", placeholder: "Enter expense name" %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.label :date, class: "form-label" %>
+      <%= f.date_field :date, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.label :amount, class: "form-label" %>
+      <%= f.number_field :amount, step: 0.01, class: "form-control", placeholder: "Enter amount" %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.label :description, class: "form-label" %>
+      <%= f.text_area :description, class: "form-control", rows: 4, placeholder: "Enter description" %>
+    </div>
+
+    <div class="d-grid">
+      <%= f.submit "Save Expense", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+
+  <br/>
+
+  <%= link_to "Back to expenses", expenses_path, class: "btn btn-primary" %>
+</div>
