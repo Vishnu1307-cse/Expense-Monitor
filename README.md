@@ -14,7 +14,7 @@ This is a basic CRUD based web application where we can add our daily expenses a
   Only sqlite3 needs to be installed on your system
 * How to run the test suite
   Open the web application and create an account, then login and start using
-* Services (job queues, cache servers, search engines, etc.)
+* Services
   This is a general purpose day to day useable web application of users to enter and monitor their expenses
 * Deployment instructions
   Get the web application and go to the file location in your git bash and type rails s to start a server. And in your browser type localhost:3000
